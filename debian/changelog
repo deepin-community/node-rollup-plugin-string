@@ -1,0 +1,117 @@
+node-rollup-plugin-string (3.0.0-7) unstable; urgency=medium
+
+  [ Julien Puydt ]
+  * Fix d/watch.
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on nodejs.
+
+  [ Julien Puydt ]
+  * Bump standards-version to 4.6.0.
+
+ -- Julien Puydt <jpuydt@debian.org>  Sat, 04 Sep 2021 23:22:46 +0200
+
+node-rollup-plugin-string (3.0.0-6) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 13
+  * Fix DEB_BUILD_PROFILES profile name
+  * Fix build (result was incompatible with upstream code)
+  * Require rollup ≥ 1 and launch all upstream tests
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 27 Sep 2020 08:20:15 +0200
+
+node-rollup-plugin-string (3.0.0-5) unstable; urgency=medium
+
+  * Team Upload.
+
+  [ Nilesh Patra ]
+  * Update Build depends in accordance with Babel7
+  * Fix with cme
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Pirate Praveen ]
+  * Don't transpile by default
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 03 May 2020 09:37:13 +0530
+
+node-rollup-plugin-string (3.0.0-4) unstable; urgency=medium
+
+  * Team upload
+  * Build with newer rollup
+  * Do not transpile but depends on nodejs (>=10)
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 24 Feb 2020 22:28:24 +0100
+
+node-rollup-plugin-string (3.0.0-3) unstable; urgency=medium
+
+  * Team upload
+
+  [ Pirate Praveen ]
+  * Add node-rollup-plugin-buble as build dependency (Closes: #950088)
+  * Bump Standards-Version to 4.4.1 (no changes needed)
+
+  [ Xavier Guimard ]
+  * Fix test patch
+  * Group patches related to build in dist
+  * Declare compliance with policy 4.5.0
+  * Add "Rules-Requires-Root: no"
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 29 Jan 2020 06:09:56 +0100
+
+node-rollup-plugin-string (3.0.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Add debian/gbp.conf
+  * Add upstream/metadata
+  * Drop unneeded version constraints from (build) dependencies
+  * Fix bad main/files field in package.json (reported)
+  * Switch install to pkg-js-tools
+  * Fix upstream test for rollup 0.50
+  * Remove useless debian/links
+  * Enable upstream test
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 07 Aug 2019 21:33:37 +0200
+
+node-rollup-plugin-string (3.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Point Vcs-* fields to salsa.
+  * Use my debian.org mail address.
+  * Update dates in d/copyright.
+  * Bump std-ver to 4.4.0.
+  * Refresh patch.
+  * Add new patch to unbreak upstream exports.
+
+ -- Julien Puydt <jpuydt@debian.org>  Wed, 17 Jul 2019 15:23:07 +0200
+
+node-rollup-plugin-string (2.0.2-3) unstable; urgency=medium
+
+  * Use rollup -- like upstream.
+  * Refresh packaging:
+    - Bump std-ver to 4.1.3.
+    - Refresh d/copyright.
+    - Bump dh compat to 11.
+    - Move to section javascript.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 25 Feb 2018 10:01:59 +0100
+
+node-rollup-plugin-string (2.0.2-2) unstable; urgency=medium
+
+  * Improve module exports.
+  * Bump std-ver to 4.1.0.
+  * Bump d/watch to version 4.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 08 Sep 2017 07:11:54 +0200
+
+node-rollup-plugin-string (2.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #867329)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 05 Jul 2017 21:37:19 +0200

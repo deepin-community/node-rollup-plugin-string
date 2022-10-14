@@ -1,0 +1,32 @@
+Source: node-rollup-plugin-string
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Julien Puydt <jpuydt@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13),
+               mocha <!nocheck>,
+               nodejs,
+               node-rollup-pluginutils,
+               dh-sequence-nodejs,
+               rollup (>> 1~),
+               node-rollup-plugin-babel (>= 4.4~) <pkg.node-rollup-plugin-string.transpilebabel>,
+               node-rollup-plugin-buble (>= 0.19.8~) <pkg.node-rollup-plugin-string.transpilebuble>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-rollup-plugin-string
+Vcs-Git: https://salsa.debian.org/js-team/node-rollup-plugin-string.git
+Homepage: https://github.com/TrySound/rollup-plugin-string
+Rules-Requires-Root: no
+
+Package: node-rollup-plugin-string
+Architecture: all
+Depends: ${misc:Depends},
+         node-rollup-pluginutils
+Recommends: rollup
+Enhances: rollup
+Breaks: rollup (<< 0.68.2+ds~)
+Description: Nodejs code to convert text files to modules
+ This plugin for rollup turns text files into modules ready to be
+ imported.
+ .
+ Node.js is an event-based server-side JavaScript engine.

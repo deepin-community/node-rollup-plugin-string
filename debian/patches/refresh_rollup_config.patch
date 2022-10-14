@@ -1,0 +1,43 @@
+Description: update the rollup config to new versions
+ Fix also files and main fields
+Author: Julien Puydt
+Forwarded: yes
+Reviewed-By: Xavier Guimard <yadd@debian.org>
+Last-Update: 2019-08-07
+
+--- a/package.json
++++ b/package.json
+@@ -2,8 +2,9 @@
+   "name": "rollup-plugin-string",
+   "version": "3.0.0",
+   "description": "Converts text files to modules",
+-  "main": "index.js",
++  "main": "dist/rollup-plugin-string.js",
+   "files": [
++    "dist",
+     "index.js"
+   ],
+   "dependencies": {
+--- a/rollup.config.js
++++ b/rollup.config.js
+@@ -3,16 +3,13 @@
+ var pkg = require('./package.json');
+ 
+ export default {
+-	entry: 'index.js',
++	input: 'index.js',
+ 	plugins: [buble()],
+-	targets: [
++        external: ['rollup-pluginutils'],
++	output: [
+ 		{
+ 			format: 'cjs',
+-			dest: pkg['main']
+-		},
+-		{
+-			format: 'es6',
+-			dest: pkg['jsnext:main']
++			file: 'dist/rollup-plugin-string.js'
+ 		}
+ 	]
+ };

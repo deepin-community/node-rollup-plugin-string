@@ -1,0 +1,5 @@
+version=4
+opts=\
+dversionmangle=s/\+(debian|dfsg|ds|deb)(\.\d+)?$//,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-rollup-plugin-string-$1.tar.gz/ \
+ https://github.com/TrySound/rollup-plugin-string/tags .*/v?([\d\.]+).tar.gz
