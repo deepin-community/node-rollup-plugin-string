@@ -6,13 +6,12 @@ Testsuite: autopkgtest-pkg-nodejs
 Priority: optional
 Build-Depends: debhelper-compat (= 13),
                mocha <!nocheck>,
-               nodejs,
                node-rollup-pluginutils,
                dh-sequence-nodejs,
                rollup (>> 1~),
                node-rollup-plugin-babel (>= 4.4~) <pkg.node-rollup-plugin-string.transpilebabel>,
                node-rollup-plugin-buble (>= 0.19.8~) <pkg.node-rollup-plugin-string.transpilebuble>
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/js-team/node-rollup-plugin-string
 Vcs-Git: https://salsa.debian.org/js-team/node-rollup-plugin-string.git
 Homepage: https://github.com/TrySound/rollup-plugin-string

@@ -1,13 +1,17 @@
 Description: Configure transpilation as per different versions and transpilers
+Forwarded: not-needed
+Reviewed-By: Yadd <yadd@debian.org>
+Last-Update: 2021-12-16
+
 --- a/rollup.config.js
 +++ b/rollup.config.js
-@@ -1,10 +1,36 @@
+@@ -1,11 +1,37 @@
 -import buble from 'rollup-plugin-buble';
 +var plugins = [];
 +
 +switch(process.env.TRANSPILE) {
 +case 'babel6':
-+    var babel=require('rollup-plugin-babel');
++    var babel=require('@rollup/plugin-babel');
 +    const plugins_babel6 = [
 +      babel({
 +	babelrc: false,
@@ -16,7 +20,7 @@ Description: Configure transpilation as per different versions and transpilers
 +    ];
 +    plugins = plugins_babel6; break;
 +case 'babel7':
-+    var babel=require('rollup-plugin-babel');
++    var babel=require('@rollup/plugin-babel');
 +    const plugins_babel7 = [
 +      babel(),
 +    ];
@@ -24,7 +28,7 @@ Description: Configure transpilation as per different versions and transpilers
 +case 'none':
 +    plugins = []; break;
 +default:
-+    var buble=require('rollup-plugin-buble');
++    var buble=require('@rollup/plugin-buble');
 +    const plugins_buble = [
 +    buble()
 +    ];
@@ -36,7 +40,9 @@ Description: Configure transpilation as per different versions and transpilers
  export default {
  	input: 'index.js',
 -	plugins: [buble()],
+-        external: ['rollup-pluginutils'],
 +	plugins: plugins,
-         external: ['rollup-pluginutils'],
++	external: ['@rollup/pluginutils'],
  	output: [
  		{
+ 			format: 'cjs',
