@@ -1,3 +1,20 @@
+node-rollup-plugin-string (3.0.0-9) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Add fix for rollup 3 (Closes: #1022695)
+
+ -- Yadd <yadd@debian.org>  Fri, 28 Oct 2022 16:06:37 +0200
+
+node-rollup-plugin-string (3.0.0-8) unstable; urgency=medium
+
+  * Team upload
+  * Fix filenamemangle
+  * Drop nodejs dependency
+  * Update build to use new @rollup/plugin-*
+
+ -- Yadd <yadd@debian.org>  Thu, 16 Dec 2021 06:47:53 +0100
+
 node-rollup-plugin-string (3.0.0-7) unstable; urgency=medium
 
   [ Julien Puydt ]

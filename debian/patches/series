@@ -1,5 +1,3 @@
 refresh_rollup_config.patch
-#unbreak.patch
-#disable-one-test.diff
 allow-to-configure-transpile.patch
-#fix-test.diff
+fix-for-rollup-3.patch
